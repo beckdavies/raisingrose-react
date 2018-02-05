@@ -1,15 +1,19 @@
 const webpack = require("webpack"),
     ExtractTextPlugin = require('extract-text-webpack-plugin'),
+    HtmlWebpackPlugin = require('html-webpack-plugin'),
     path = require("path"),
     JS_BUILD_DIR = path.resolve(__dirname, "static/js"),
     JS_APP_DIR = path.resolve(__dirname, "src/js"),
     CSS_BUILD_DIR = path.resolve(__dirname, "static/css"),
-    CSS_APP_DIR = path.resolve(__dirname, "src/sass");
+    CSS_APP_DIR = path.resolve(__dirname, "src/scss");
+
 
 var config = {
     entry: [
-        JS_APP_DIR + "/app.jsx",
-        CSS_APP_DIR + "/styles.scss"
+        //JS_APP_DIR + "/index.js",
+        './app/src/js/index.js',
+        './app/src/scss/styles.scss'
+        //CSS_APP_DIR + "/styles.scss"
     ],
     output: {
         path: JS_BUILD_DIR,
