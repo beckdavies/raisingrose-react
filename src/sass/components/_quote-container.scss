@@ -1,0 +1,51 @@
+/*content on the quotes page*/
+
+.quote-container {
+    font-family: Arial;
+    border-bottom: 1px solid #ccc;
+    padding: 1rem
+}
+
+.quote-container div {
+    margin: 0 0 0.25em 0
+}
+
+.quote-container input[type="text"] {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0;
+    border-width: 0px;
+    background: transparent;
+    font-family: Arial;
+}
+
+
+.quote {
+    line-height: 1.5rem
+}
+
+
+/*.quote:before {content:'"';}
+			.quote:after {content:'"';}*/
+
+.quote.is-editing:before,
+.quote.is-editing:after {
+    display: none
+}
+
+.about {
+    font-style: italic;
+    color: #666;
+    line-height: 1.5rem
+}
+
+.date {
+    font-size: 14px;
+    color: #aaa;
+    margin: 0;
+    display: inline-block
+}
+
+.quote-action-hide {
+    float: right
+}

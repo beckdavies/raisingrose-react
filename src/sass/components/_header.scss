@@ -1,0 +1,20 @@
+
+header {
+	position: fixed;
+	width: 100%; 
+	background: #BD1550; 
+	/*padding: 7px 1rem 0.6rem 1rem;*/
+	margin-top:9px;
+	box-shadow: 
+		0 -3px 0 0 #f99f0e, /*orange*/
+		0 -6px 0 0 #f8ca00, /*yellow*/
+		0 -9px 0 0 #81b519 /*green*/
+		/*,0px 1px 1px 0px rgba(50, 50, 50, 0.63)*/;		
+}
+
+
+h1 {float:left; font-size: 1rem; margin:0}
+h1 a {color:#F99F0E; text-decoration: none;}
+h1 span {display:block; padding-left: 1rem;}
+h1 span:last-of-type {color:#F8CA00; margin-top:-7px}
+			

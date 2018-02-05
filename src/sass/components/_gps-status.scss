@@ -1,0 +1,35 @@
+/* basic styles for GPS elements*/
+.GPS-status {
+	color: #ccc;
+}
+
+.GPS-status:before, .GPS-status:after {
+	display: inline-block;
+	content:'';
+}
+
+.GPS-status.finding:before,
+.GPS-status.found:before,
+.GPS-status.not-found:before {
+	width: 14px; 
+	height: 14px;
+	background-image: url('../img/status.svg');
+	background-repeat: no-repeat;
+}
+
+.GPS-status.finding:after,
+.GPS-status.found:after,
+.GPS-status.not-found:after {
+	content:'GPS';
+	margin-left:0.25rem;
+	font-size: 12px;
+	font-family: Arial;
+}
+
+/* specific content for the GPS messages, based on class */
+.GPS-status.finding:before {background-position: 1px 1px;}
+.GPS-status.found:before {background-position: -27px 1px;}
+.GPS-status.not-found:before {background-position: -13px 1px;}
+
+/* basic styles for GPS elements*/
+			

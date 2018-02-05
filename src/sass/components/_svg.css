@@ -1,0 +1,41 @@
+.svg-icon {
+    position: relative;
+    top: 5px;
+    height: 23px
+}
+
+.svg-icon.add {
+    width: 23px
+}
+
+.svg-icon.list-quotes {
+    width: 32px
+}
+
+.svg-icon.save {
+    width: 23px
+}
+
+.save {
+    transition: all 500ms linear
+}
+/*.save.success svg {fill:#81b519}
+.save.saving svg {fill:#f99f0e}*/
+
+.save.success {
+    background: #81b519
+}
+
+.save.saving {
+    background: #f99f0e
+}
+
+svg {
+    fill: #f2f2f2
+}
+
+.is-clicked svg {
+    fill: #BD1550;
+    /*-webkit-filter: drop-shadow(0px 2px 10px 0px rgba(50, 50, 50, 0.75));*/
+    /*filter: drop-shadow(inset 0px 2px 10px 0px #000); /* Same syntax as box-shadow */
+}
