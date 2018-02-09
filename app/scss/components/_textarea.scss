@@ -7,13 +7,14 @@ textarea {
     border-radius: 3px;
     border: 1px solid #ccc;
     margin-bottom: 0.5rem;
-    font-family: Arial, 'sans serif'
+    font-family: Arial, 'sans serif';
+
+    &#quote {
+        height: 10rem
+    }
+
+    &#about {
+        height: 5rem
+    }
 }
 
-textarea#quote {
-    height: 10rem
-}
-
-textarea#about {
-    height: 5rem
-}
