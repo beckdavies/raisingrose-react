@@ -7,7 +7,7 @@ class App extends React.Component {
 	render() {
 		return (
 			<div>
-				<Header />
+				<Header tagline="thsi" age="{true}" fish="5000" />
 				<QuoteForm />
 				<QuoteList />
 			</div>
