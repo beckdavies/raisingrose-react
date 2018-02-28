@@ -1,4 +1,4 @@
-var React = require('react');
+import React from 'react';
 
 class Menu extends React.Component {
 	render() {
@@ -29,8 +29,8 @@ class Menu extends React.Component {
 	                </a>
 	            </li>
 	        </ul>
-		)
+		);
 	}
 }
 
-module.exports = Menu;
+export default Menu;

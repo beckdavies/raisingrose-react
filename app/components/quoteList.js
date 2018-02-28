@@ -1,12 +1,12 @@
-var React = require('react');
+import React from 'react';
 
 class QuoteList extends React.Component {
 	render() {
 		return (
 			<section className="wrapper quotes js-quotes-wrapper is-empty">
     		</section>
-		)
+		);
 	}
 }
 
-module.exports = QuoteList
+export default QuoteList;

@@ -1,5 +1,5 @@
-var React = require('react');
-var Menu = require('./Menu');
+import React from 'react';
+import Menu from './Menu';
 
 class Header extends React.Component {
 	render() {
@@ -13,8 +13,8 @@ class Header extends React.Component {
 				</h1>
 				<Menu />
 			</header>
-		)
+		);
 	}
 }
 
-module.exports = Header;
+export default Header;
