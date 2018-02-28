@@ -3,11 +3,11 @@ import React from 'react';
 class QuoteForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {value: ''};
 
     this.state = {
 	    quote: '',
-	    topic: ''
+	    topic: '',
+	    date: new Date()
 	  };
 
     this.handleChange = this.handleChange.bind(this);
@@ -15,11 +15,18 @@ class QuoteForm extends React.Component {
   }
 
   handleChange(event) {
-    this.setState({value: event.target.value});
+  	const target = event.target;
+  	const value = target.value;
+  	const name = target.name;
+
+    this.setState({
+    	[name]: value
+    });
   }
 
+
   handleSubmit(event) {
-    alert('A name was submitted: ' + this.state.value);
+    alert('Quote: ' + this.state.quote + 'Topic: ' + this.state.topic + this.state.date);
     event.preventDefault();
   }
 
@@ -29,11 +36,18 @@ class QuoteForm extends React.Component {
 			<form onSubmit={this.handleSubmit}>
 				<textarea placeholder="what did she say?" 
 						  value={this.state.quote}
-						  onChange={this.handleChange}></textarea>
+						  onChange={this.handleChange}
+						  name="quote"
+						  required></textarea>
+				<textarea placeholder="what was it about?" 
+						  value={this.state.topic}
+						  onChange={this.handleChange}
+						  name="topic"
+						  required></textarea>
 				<input type="hidden" id="lat" name="lat" />
 				<input type="hidden" id="long" name="long" />
 				<input type="hidden" id="published" name="published" value="1" />
-				<input type="submit" value="Submit" className="save"/>
+				<button type="submit" value="Submit" className="save">Add</button>
 			</form>
 		</section>
     );
