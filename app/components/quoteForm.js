@@ -41,11 +41,14 @@ class QuoteForm extends React.Component {
 
 	createQuote = (event) => {
 		event.preventDefault();
-		const quote = {
+		const newQuote = {
 			content: this.contentRef.value.value,
 			topic: this.topicRef.value.value
 		};
-		console.log(quote);
+		this.props.addQuote(newQuote);
+
+		// refresh the form
+		event.currentTarget.reset();
 	}
 
 	render() {
