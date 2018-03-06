@@ -10,15 +10,13 @@ class App extends React.Component {
 	// 	this.ref = base.syncState();
 	// };
 
-	state = {
-		quotes: {
-			
-		}
-	};
+	// state = {
+	// 	allQuotes: {}
+	// };
 
-	addQuote = quote => {
-		console.log("adding a quote");
-	};
+	// addQuote = quote => {
+	// 	console.log("adding a quote");
+	// };
 
 	render() {
 		return (

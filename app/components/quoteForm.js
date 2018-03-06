@@ -2,54 +2,64 @@ import React from 'react';
 
 class QuoteForm extends React.Component {
 
-	constructor(props) {
-		super(props);
+	contentRef = React.createRef();
+	topicRef = React.createRef();
 
-		this.state = {
-		    quote: '',
-		    topic: '',
-		    date: new Date(),
-		    lat: '',
-		    long: '',
-		    publish: ''
-		 };
+	// constructor(props) {
+	// 	super(props);
 
-		this.handleChange = this.handleChange.bind(this);
-		this.handleSubmit = this.handleSubmit.bind(this);
-	}
+	// 	this.state = {
+	// 	    quote: '',
+	// 	    topic: '',
+	// 	    date: new Date(),
+	// 	    lat: '',
+	// 	    long: '',
+	// 	    publish: ''
+	// 	 };
 
-	handleChange(event) {
-		const target = event.target;
-		const value = target.value;
-		const name = target.name;
+	// 	this.handleChange = this.handleChange.bind(this);
+	// 	this.handleSubmit = this.handleSubmit.bind(this);
+	// }
 
-		this.setState({
-			[name]: value
-		});
-	}
+	// handleChange(event) {
+	// 	const target = event.target;
+	// 	const value = target.value;
+	// 	const name = target.name;
+
+	// 	this.setState({
+	// 		[name]: value
+	// 	});
+	// }
 
 
-	handleSubmit(event) {
-		// stop the form from submitting
+	// handleSubmit(event) {
+	// 	// stop the form from submitting
+	// 	event.preventDefault();
+	// 	console.log('Quote: ' + this.state.quote + 'Topic: ' + this.state.topic + this.state.date);
+	// 	// get the text from the input
+	// }
+
+	createQuote = (event) => {
 		event.preventDefault();
-		console.log('Quote: ' + this.state.quote + 'Topic: ' + this.state.topic + this.state.date);
-		// get the text from the input
+		const quote = {
+			content: this.contentRef.value.value,
+			topic: this.topicRef.value.value
+		};
+		console.log(quote);
 	}
 
 	render() {
 		return (
 			<section className="wrapper form">
-				<form onSubmit={this.handleSubmit}>
+				<form onSubmit={this.createQuote}>
 					<textarea placeholder="quote" 
-							  value={this.state.quote}
-							  onChange={this.handleChange}
-							  name="quote"
-							  required></textarea>
+							  name="content"
+							  ref={this.contentRef}
+							  ></textarea>
 					<textarea placeholder="topic" 
-							  value={this.state.topic}
-							  onChange={this.handleChange}
 							  name="topic"
-							  required></textarea>
+							  ref={this.topicRef}
+							  ></textarea>
 					<input type="hidden" id="lat" name="lat" />
 					<input type="hidden" id="long" name="long" />
 					<input type="hidden" id="published" name="published" value="1" />
