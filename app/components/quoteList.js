@@ -4,8 +4,8 @@ import Quote from './Quote';
 class QuoteList extends React.Component {
 	render() {
 		return (
-			<section className="wrapper quotes js-quotes-wrapper is-empty">
-				<Quote />
+			<section className="quotes js-quotes-wrapper is-empty">
+				{Object.keys(this.state.allQuotes).map(key => <p>{key}</p>)}<Quote />
     		</section>
 		);
 	}

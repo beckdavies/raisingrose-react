@@ -43,7 +43,8 @@ class QuoteForm extends React.Component {
 		event.preventDefault();
 		const newQuote = {
 			content: this.contentRef.value.value,
-			topic: this.topicRef.value.value
+			topic: this.topicRef.value.value,
+			date: new Date().toString()
 		};
 		this.props.addQuote(newQuote);
 
@@ -53,13 +54,13 @@ class QuoteForm extends React.Component {
 
 	render() {
 		return (
-			<section className="wrapper form">
+			<section className="form">
 				<form onSubmit={this.createQuote}>
-					<textarea placeholder="quote" 
+					<textarea placeholder="She said..." 
 							  name="content"
 							  ref={this.contentRef}
 							  ></textarea>
-					<textarea placeholder="topic" 
+					<textarea placeholder="when / about / because..." 
 							  name="topic"
 							  ref={this.topicRef}
 							  ></textarea>

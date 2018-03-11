@@ -1,7 +1,9 @@
 import React from 'react';
 import Header from './Header';
 import QuoteForm from './QuoteForm';
-import QuoteList from './QuoteList';
+// import QuoteList from './QuoteList';
+import Quote from './Quote';
+
 //import base from "../base";
 
 class App extends React.Component {
@@ -32,8 +34,12 @@ class App extends React.Component {
 		return (
 			<div>
 				<Header />
-				<QuoteForm addQuote={this.addQuote} />
-				<QuoteList />
+				<div className="wrapper">
+					<QuoteForm addQuote={this.addQuote} />
+					<section>
+						{Object.keys(this.state.allQuotes).reverse().map(key => <Quote key={key} details={this.state.allQuotes[key]} />)}
+	    			</section>
+    			</div>
 			</div>
 		);
 	}
